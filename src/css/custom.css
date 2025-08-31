@@ -7,13 +7,13 @@
 /* You can override the default Infima variables here. */
 :root {
   /* Pillar-inspired teal accent on light theme */
-  --ifm-color-primary: #00cbb3;
-  --ifm-color-primary-dark: #00b5a0;
-  --ifm-color-primary-darker: #00a995;
-  --ifm-color-primary-darkest: #008674;
-  --ifm-color-primary-light: #1ad3be;
-  --ifm-color-primary-lighter: #42d9c8;
-  --ifm-color-primary-lightest: #74e3d6;
+  --ifm-color-primary: #F74A53;
+  --ifm-color-primary-dark: #F74A53;
+  --ifm-color-primary-darker: #F74A53;
+  --ifm-color-primary-darkest: #F74A53;
+  --ifm-color-primary-light: #F74A53;
+  --ifm-color-primary-lighter: #F74A53;
+  --ifm-color-primary-lightest: #F74A53;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-navbar-background-color: #0e141b;
@@ -26,7 +26,7 @@
   --ifm-background-color: #0b0f14;
   --ifm-navbar-background-color: #0e141b;
   --ifm-footer-background-color: #0b0f14;
-  --ifm-color-primary: #00e0c7;
+  --ifm-color-primary: #F74A53;
   --ifm-color-primary-dark: #00c9b2;
   --ifm-color-primary-darker: #00bca7;
   --ifm-color-primary-darkest: #009784;
