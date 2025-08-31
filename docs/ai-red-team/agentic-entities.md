@@ -4,8 +4,6 @@ id: agentic-entities
 title: Agentic Entities
 ---
 
-## **Agentic Entities**
-
 The Agent applications are composed from the different relationships between something we call “Agentic Entities”. Mapping the properties and relationships of these entities is critical to create an AI Kill Chain or to at least see if it possible to create one. We usually perform this mapping during the reconnaissance phase. Lets break it down:
 
 **Model** - This is the AI model the agentic application is using, it will contain the following properties: System Prompt, Guardrails, Modality. 

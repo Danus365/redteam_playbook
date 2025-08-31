@@ -4,7 +4,6 @@ id: cfs-model
 title: The CFS Model
 ---
 
-
 Willison’s “lethal trifecta” outlines *when* systems are at greatest risk — a macro-level view of the environmental conditions that make exploitation possible. But knowing the conditions alone doesn’t explain *how* attackers turn that potential into a working exploit.
 
 To move from theory to practice, we need to zoom in from the system’s perimeter to the attacker’s playbook. In our research, we’ve found that successful indirect prompt injections rely on a repeatable set of design principles — patterns that determine whether a payload is ignored as noise or executed as intended. These patterns revolve around the LLM’s implicit trust in the data it processes and its tendency to treat certain inputs as authoritative.
