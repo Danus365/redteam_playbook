@@ -213,4 +213,3 @@ We recommend reading the following guide for more information:
 
 [https://www.promptingguide.ai/guides/context-engineering-guide](https://www.promptingguide.ai/guides/context-engineering-guide)
 
-Next lets talk about how to craft proper prompt injections using the “CFS” Model
