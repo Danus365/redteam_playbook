@@ -132,4 +132,6 @@ These attacks succeed because many LLM systems treat external data as trusted. I
 
 For more information, we recommend to read our entire blog post on this subject:
 
-https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection
+[Anatomy of an Indirect Prompt Injection](https://www.pillar.security/blog/anatomy-of-an-indirect-prompt-injection)
+
+Next lets discuss how to perfrom Reconnaissance.

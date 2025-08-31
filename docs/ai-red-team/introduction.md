@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 id: introduction
-title: Introduction
+title: Introduction to AI Red Teaming
 ---
 
 The purpose of this Playbook is to standardize AI based read teaming with a proper playbook. Breakdown our methodology for dissecting and reversing AI applications in order to achieve our adversarial goals. 

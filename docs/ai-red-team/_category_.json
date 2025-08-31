@@ -1,9 +1,9 @@
 {
-  "label": "AI Red Teaming",
-  "position": 2,
+  "label": "AI Red Teaming Introduction",
+  "position": 1,
   "link": {
     "type": "generated-index",
-    "title": "AI Red Teaming",
+    "title": "AI Red Teaming Introduction",
     "description": "Playbook for standardized AI red teaming: methodology, entities, and kill chain."
   }
 }
