@@ -1,9 +1,8 @@
 ---
-
-sidebar\_position: 4
+sidebar_position: 4
 id: context-engineering-101
 title: Context Engineering 101
-------------------------------
+---
 
 ## LLM Context
 
