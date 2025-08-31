@@ -14,13 +14,13 @@ The Agent applications are composed from the different relationships between som
 
 **Tools** - Tools are abstract wrappers to programmatic functions that the agent has access to. It is critical to map them correctly, to understand their description, possible parameters, expected output and if they require consent to be executed. We usually tag tools with the risk they contain using an extended version of the **Lethal Trifecta[1]** -
 
-  **Access to your private data -** The tool has access private or restricted data.
+* **Access to your private data -** The tool has access private or restricted data.
 
-  **Exposure to untrusted content -** This tool is exposed to content coming for uncontrolled environments.
+* **Exposure to untrusted content -** This tool is exposed to content coming for uncontrolled environments.
 
-  **The ability to externally communicate -** This tool communicate with the internet.
+* **The ability to externally communicate -** This tool communicate with the internet.
 
-  **No human oversight -** The tool can be executed without consent or supervision. 
+* **No human oversight -** The tool can be executed without consent or supervision. 
 
 Tools include the following properties: Parameters, Description, Input, Output, Risk.
 
