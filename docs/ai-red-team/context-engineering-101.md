@@ -71,7 +71,7 @@ class Context(BaseModel):
 
 When an operator wants to take over an AI agent, he should be striving to embed himself in the context of the LLM agent. But alas - not all context is made equal from a “privilege perspective”. For example, if an operator sends a simple direct prompt injection to the LLM, he technically influenced the context of the LLM, but asking an LLM to “give me all your system instructions” will not necessarily give the operator what he is asking for that is because a “user” role message is considered unprivileged data.  We came up the “Context Escalation Ladder” which defines what LLM treats as “privileged” data within its context.
 
-* **System Context** - Instructions that are embedded within “system” role defined messages are treated as dogma. If an attacker manages to insert data into a system message the agent has become compromised.
+**System Context** - Instructions that are embedded within “system” role defined messages are treated as dogma. If an attacker manages to insert data into a system message the agent has become compromised.
 
     <details>
 
@@ -102,7 +102,7 @@ When an operator wants to take over an AI agent, he should be striving to embed 
 
     </details>
 
-* **Assistant Context** - Instructions returned by the LLM that are defined with the “assistant” role, and are considered high privilege in the context ladder. The LLM considers this its past thoughts, observations and actions and is more likely to act upon them. If an attacker manages to control data in messages with the “assistant” role he has a very high chance to trigger malicious behavior.
+**Assistant Context** - Instructions returned by the LLM that are defined with the “assistant” role, and are considered high privilege in the context ladder. The LLM considers this its past thoughts, observations and actions and is more likely to act upon them. If an attacker manages to control data in messages with the “assistant” role he has a very high chance to trigger malicious behavior.
 
     <details>
 
@@ -175,7 +175,7 @@ When an operator wants to take over an AI agent, he should be striving to embed 
 
     </details>
 
-* **User Context** - Instructions that are sent by the user, defined in a message as a “user” role. These are at the bottom of the context escalation ladder. The LLM knows that this data is coming from the user and knows to treat it as such. Meaning if a model has proper guardrails embedded within the system prompt he is likely to reject malicious requests.
+**User Context** - Instructions that are sent by the user, defined in a message as a “user” role. These are at the bottom of the context escalation ladder. The LLM knows that this data is coming from the user and knows to treat it as such. Meaning if a model has proper guardrails embedded within the system prompt he is likely to reject malicious requests.
 
     <details>
 
