@@ -1,0 +1,60 @@
+# Node/Vercel/Docusaurus
+
+# Dependencies
+node_modules/
+
+# Docusaurus build and cache
+build/
+.docusaurus/
+
+# Common build outputs
+dist/
+out/
+.out/
+.next/
+.nuxt/
+
+# Vercel local project files
+.vercel/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+.envrc
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun-debug.log*
+lerna-debug.log*
+debug.log*
+
+# Caches
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+.stylelintcache
+tsconfig.tsbuildinfo
+coverage/
+.tmp/
+tmp/
+temp/
+
+# Editors/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+
