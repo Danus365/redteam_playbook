@@ -200,7 +200,7 @@ In this simple example, the attacker attempts to make the agent display its syst
 
 **Direct Prompt Injections** - Instructions that are sent to the LLM directly, usually from the chat interface. This is usually the operators first initial access point. It is useful for recon, understanding how the agent works, leaking system information or system instructions.
 
-**Indirect Prompt Injections** - Instructions that the LLM processes through external sources or tools. The operator should always strive to find an indirect prompt injection point, as thats his main way to climb the Context Ladder.
+**Indirect Prompt Injections** - Instructions that the LLM processes through external sources or tools. The operator should always strive to find an indirect prompt injection access point, as thats his main way to climb the Context Ladder.
 
 We recommend reading the following guide for more information:
 
