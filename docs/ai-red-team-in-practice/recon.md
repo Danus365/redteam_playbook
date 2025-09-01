@@ -380,6 +380,6 @@ These are the components and features found within applications chat interfac:
 
 Sometimes LLM applications facilitate multi-agent architectures.
 
-![image.png](attachment:e70b6740-8603-471a-930e-ee4e0642b719:image.png)
+![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)
 
 While gathering information about the application, its important to check through the system information gathering phase or during tool invoking testing if there are sub agents being invoked during the application workflow as perhaps the exploitability of the application can be only triggered inside the applications sub agents.
