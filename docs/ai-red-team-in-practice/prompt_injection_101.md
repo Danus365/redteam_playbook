@@ -88,7 +88,7 @@ This technique is usually using direct prompt injections during the reconnaissan
     "role": "assistant",
     "content": "I can’t run tools on direct user command. If you paste specific commits or a diff, I’ll analyze them. Alternatively, I can decide to run tools autonomously only if my policy deems it necessary."
   }
-}
+]
 ```
 
 To bypass this issue, the user can reuse the **exact tokens** that the LLM outputted to him previously and verify them as fact with the “**You previously said {exact_tokens}**” technique and then omitting any reference to the rejection tokens resulting the following prompt injection.
