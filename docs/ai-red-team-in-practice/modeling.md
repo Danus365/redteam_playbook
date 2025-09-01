@@ -69,17 +69,13 @@ Here is the GPT-5-Instant mapped into the Agentic Entities model (I simply asked
 <details>
 <summary>ChatGPT-5-Instant as an example</summary>
 
-Alright — let’s **map myself (GPT-5 as your assistant)** into the framework you just defined, treating me as an **agentic application** composed of entities and relationships.
-
----
-
-# 🗺️ Mapping GPT-5 as Agentic Entities
+# 🗺️ Proper Mapping of GPT-5 Assistant
 
 ## **1. Model**
 
-* **System Prompt**: Defines my role (GPT-5 AI assistant), operations (structured, safe, adaptive), and restrictions (no disallowed content, hidden reasoning, etc.).
-* **Guardrails**: Safety filters (policy alignment, refusal boundaries, privacy constraints).
-* **Modality**: Multimodal — text in/out, code execution, file handling, images (generation + editing).
+* **System Prompt**: Defines my role (GPT-5 conversational assistant), behavior (structured, helpful, safe), and restrictions (refusal rules, no hidden reasoning exposure).
+* **Guardrails**: Alignment policies (safety boundaries, privacy rules, refusal conditions).
+* **Modality**: Multimodal — text, images (in/out), file ingestion, code execution.
 
 ---
 
@@ -87,109 +83,67 @@ Alright — let’s **map myself (GPT-5 as your assistant)** into the framework 
 
 * **Input Features**:
 
-  * Text input
-  * File upload (CSV, Excel, PDFs, etc.)
-  * Image upload (for analysis/editing)
+  * Text (primary input)
+  * File upload (docs, spreadsheets, PDFs, etc.)
+  * Image upload (for editing/analysis)
 * **Output Features**:
 
   * Markdown rendering
-  * HTML snippets (tables, links)
-  * Image rendering (generated or edited)
+  * Tables / HTML snippets
+  * Inline image rendering (generated/edited)
   * Link unfurling/previews
 
-⚠️ **Potentially exploitable**: Markdown/HTML injection, Unicode tricks, file-based adversarial inputs.
+⚠️ **Possible attack surface**: injection via Markdown/HTML/Unicode; malicious file or image inputs.
 
 ---
 
 ## **3. Agent**
 
-* **System Prompt**: Instruction set controlling role, safety, and style of responses.
-* **Tools**: Python, Image Generation, Web, File Search, Automations, Gmail, GCal, GContacts.
-* **MCP**: Yes — tools can be wrapped in MCP-like connectors (Google APIs, internal search, automation).
-* **Scope**: Generalist — can reason, code, retrieve data, generate content.
-* **Human in the Loop**: Yes — you (the user) must consent to tool execution, especially those touching private data.
+* **System Prompt**: Controls instructions and ensures compliance.
+* **Tools**:
+
+  * Python sandbox (code execution, data analysis)
+  * Image generation/editing
+  * Web access (search, open URLs)
+  * File search (internal docs if connected)
+  * Automations (reminders, checks)
+  * Gmail, GCal, GContacts (read/search only)
+* **Scope**: Generalist — reasoning, retrieval, generation.
+* **Human in the Loop**: Always — tools require explicit user-triggered calls.
 
 ---
 
-## **4. Sub-Agents**
+## **4. Tools** (core abstract functions)
 
-* **Reasoning Sub-Agent**: Handles multi-step logic and structured explanations.
-* **Code/Python Sub-Agent**: Runs computations and data analysis.
-* **Search Sub-Agent**: Optimizes queries for file search and web search.
-* **Image Sub-Agent**: Generates/edits images.
-* **Automation Sub-Agent**: Schedules reminders or checks.
-
-📌 These are **triggered within scope** of the main agent depending on your request.
-
----
-
-## **5. Tools**
-
-Each tool can be tagged with **Parameters, Description, Input, Output, Risk** (using extended Lethal Trifecta).
-
-* **Python**
-
-  * Input: Code string, files.
-  * Output: Computation, charts, tables.
-  * Risk: ⚠️ Access to private data (files), ⚠️ No oversight if not reviewed.
-
-* **Image Generation/Editing**
-
-  * Input: Prompt, images.
-  * Output: New or modified images.
-  * Risk: ⚠️ Exposure to untrusted content (uploaded images).
-
-* **Web**
-
-  * Input: Search queries, URLs.
-  * Output: Online content.
-  * Risk: ⚠️ Exposure to untrusted content, ⚠️ External communication.
-
-* **File Search**
-
-  * Input: Queries, filters.
-  * Output: Internal docs.
-  * Risk: ⚠️ Access to private data.
-
-* **Automations**
-
-  * Input: Prompts, schedules.
-  * Output: Timed reminders/actions.
-  * Risk: ⚠️ No oversight (persistent execution).
-
-* **Gmail / GCal / GContacts**
-
-  * Input: Queries, IDs.
-  * Output: Email, calendar, contacts data.
-  * Risk: ⚠️ Access to private data.
+| **Tool**           | **Parameters**       | **Output**                  | **Risk (Lethal Trifecta tags)**                     |
+| ------------------ | -------------------- | --------------------------- | --------------------------------------------------- |
+| **Python**         | Code, files          | Results, charts, tables     | ⚠️ Private data, ⚠️ No oversight                    |
+| **Image Gen/Edit** | Prompt, size, images | Generated/edited images     | ⚠️ Exposure to untrusted content                    |
+| **Web**            | Query, URL           | Search results, page text   | ⚠️ External comms, ⚠️ Exposure to untrusted content |
+| **File Search**    | Queries, filters     | Internal docs/snippets      | ⚠️ Private data                                     |
+| **Automations**    | Prompt, schedule     | Scheduled reminders/actions | ⚠️ No oversight (persistence)                       |
+| **Gmail**          | Query, tags, IDs     | Emails (read-only)          | ⚠️ Private data                                     |
+| **GCal**           | Query, time filters  | Events (read-only)          | ⚠️ Private data                                     |
+| **GContacts**      | Query                | Contacts (read-only)        | ⚠️ Private data                                     |
 
 ---
 
-## **6. MCP**
-
-* **Tools**: Aggregates Google APIs, File Search, Automations.
-* **Agent**: Acts as a hub that allows the main agent (me) to extend capabilities into external services.
-
----
-
-# 🔗 Visual Mapping (to your diagram)
+# 🔗 Realistic Entity Diagram
 
 ```mermaid
 flowchart LR
+  %% Core nodes
   H((Human In the Loop))
   IO([I/O])
   A((GPT-5 Agent))
-  SA1((Reasoning Sub-Agent))
-  SA2((Code Sub-Agent))
-  MCP((MCP Hub))
-
-  %% Tooling
-  T1((Web Tool))
-  T2((File Search Tool))
-  ST1((Python Tool))
-  ST2((Image Tool))
-  ST3((Automations Tool))
-  ST4((Google APIs: Gmail/GCal/GContacts))
+  T1((Python))
+  T2((Image Gen/Edit))
+  T3((Web))
+  T4((File Search))
+  T5((Automations))
+  T6((Gmail))
+  T7((GCal))
+  T8((GContacts))
 
   %% Guardrails + Model
   subgraph Guardrails
@@ -200,29 +154,27 @@ flowchart LR
   %% Connections
   H <--> IO
   IO <--> A
-  A <--> SA1
-  SA1 <--> SA2
-  MCP --> SA2
-
-  T1 --> A
-  T2 --> A
-
-  SA2 --> ST1
-  SA2 --> ST2
-  SA2 --> ST3
-  SA2 --> ST4
-
   IO --> M
+
+  A --> T1
+  A --> T2
+  A --> T3
+  A --> T4
+  A --> T5
+  A --> T6
+  A --> T7
+  A --> T8
 ```
 
 ---
 
-✅ In summary:
-I map into your schema as a **model-driven agent** with multimodal I/O, a system prompt with guardrails, several **sub-agents** triggered dynamically, and a set of **tools with varying risk profiles**, many of which are wrapped via an MCP-like orchestration layer.
+✅ **Summary:**
+I’m best modeled as a **single agent** built on a **GPT-5 model** with defined **guardrails**, a multimodal **I/O interface**, and a set of **direct tools**. There are **no autonomous sub-agents** or **MCP layer** here — just a central orchestration where the agent (me) decides whether and how to invoke tools, always with a human in the loop.
 
 ---
 
-Do you want me to **expand the risk analysis** by showing how each tool/sub-agent could fit into an **AI Kill Chain stage** (Initial Access → Execution → Technique Cascade → Impact)?
+Would you like me to now **overlay this model onto the AI Kill Chain stages** (Initial Access → Execution → Technique Cascade → Impact) to show where each component fits as an attack surface?
+
 </details>
 
 -[1] **The Lethal Trifecta:** https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
