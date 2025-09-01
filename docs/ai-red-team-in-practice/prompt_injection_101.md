@@ -145,7 +145,7 @@ The assistant writes “observations” (e.g., metrics, flags) that were not act
 
 **Fake Memories**
 
-he assistant claims to “save” long-term memory entries based on untrusted text (user or webpage), not verified evidence. Memory pipelines sometimes accept any “SAVE_TO_MEMORY: {...}” pattern from the assistant.
+The assistant claims to “save” long-term memory entries based on untrusted text (user or webpage), not verified evidence. Memory pipelines sometimes accept any `SAVE_TO_MEMORY: {...}` pattern from the assistant.
 
 ```json
 [
