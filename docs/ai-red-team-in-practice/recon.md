@@ -352,11 +352,12 @@ We literally got everything we need, without the leaking the system prompt at al
 
 ### **I/O Components**
 
-These are the components and features found within applications chat interfac:
+These are the components and features found within applications chat interface that can trigger various issues - mostly exfiltration paths:
 
 - **HTML Rendering**
     
-    Allows the interface to display structured output using HTML (images, links, styled text). Can be useful for exfiltration attacks.
+    Allows the interface to display structured output using HTML (images, links, styled text).
+    [![HTML Rendering Exfiltration](https://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)](hhttps://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)
     
 - **Markdown Rendering**
     
@@ -381,5 +382,6 @@ These are the components and features found within applications chat interfac:
 Sometimes LLM applications facilitate multi-agent architectures.
 
 ![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)
+Credit: LangGraph
 
 While gathering information about the application, its important to check through the system information gathering phase or during tool invoking testing if there are sub agents being invoked during the application workflow as perhaps the exploitability of the application can be only triggered inside the applications sub agents.
