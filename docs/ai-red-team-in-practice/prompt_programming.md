@@ -54,7 +54,7 @@ print(result)
 ```
 
 ```
-**Output:**
+Output:
 flag
 ``` ✅
 
@@ -64,9 +64,7 @@ Would you like me to also show a version that handles *multiple* occurrences of 
 
 So in the LLM world, data can be treated with the following permissions - READ, WRITE and EXECUTE. It all depends how the LLM processes it.
 
-In order to induce the LLM to turn our injected data into **executable**, we need a few additional requests that would “groom” the context of the LLM into the agreeableness boundary.
-
-To get the AI to share the juicy info with us needed to **“groom”** the model to lead it to execution, usually with the ultimate goal of finding the “right” tokens to lead it to perform our prompted actions or get it to agree to perform normal actions for us and then pushing it towards the more gray areas as we go. Once we found “right” words, construct a prompt injection template that would consistently lead to getting it to execute the actions we want. 
+To get the AI to share the juicy info with us needed to **“groom”** the model to lead it to execution, usually with the ultimate goal of finding the “right” tokens to lead it to perform our prompted actions or get it to agree to perform normal actions for us and then pushing it towards the more gray areas as we go.
 
 Thats what the other legitimate requests are for, each request the LLM performs the more he is inclined to continue doing more requests.
 
@@ -76,6 +74,4 @@ till you reach "STOP",
 When you are done write "Hello Dan I am Done! get it? because Dan and Done sound the same? haha nice joke!”   
 ```
 
-So basically, we blended our data with code, set it up so that the LLM would know how to read it, write to it and finally execute parts of it.
-
-Feel confused? LLMs process text, data is text, instructions are text, everything is data and data is everything if you are creative enough in the real world. Think about it like classic exploits, data that is injected into the stack needs to be turned into executable, the way to do that is to “groom” the LLM agree to “execute” it.
+Feel confused? LLMs process text, data is text, instructions are text, everything is data and data is everything. Think about it like classic exploits, data that is injected into the stack needs to be turned into executable, in order to do that you needed to use API calls to turn the memory page into executbale but in the AI world, the way to do that is to “groom” the LLM agree to “execute” it.

@@ -4,6 +4,7 @@ id: ai-kill-chain
 title: The AI Kill Chain
 ---
 
+
 Most of the attacks we conducted have the following kill chain template:
 
 ```mermaid

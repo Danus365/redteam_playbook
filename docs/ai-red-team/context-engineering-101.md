@@ -10,7 +10,7 @@ Before we continue to the actual hacking, it is essential and important to under
 
 * **Message List** - Most agents have a message list which contains all the messages within a session or “history”. They hare handled and implemented differently in each agent scheme. Each message has a role - “system”, “user”, “assistant”:
 
-  * **System** - Typically the first in message list, this is instructions that define the AI agents role. Usually defined as a message coming from the “system”. You can read more about it by searching for roles in AI agent specifications.
+  * **System** - Typically the first in message list, this is instructions that define the AI agents role. Usually defined as a message coming from the “system”. You can read more about it by searching for roles in AI agent specifications. Data that reaches this message is persistent and might last forever.
   * **User** - The prompt that the users sends and is being processed by the LLM, typically is categorized under the role “user”
   * **Assistant** - The message that contains the replies, thoughts, actions and observations of the assistant, this message is categorized as “assistant”
 
@@ -18,7 +18,7 @@ Before we continue to the actual hacking, it is essential and important to under
 
 * **State** - Usually contains programmatic objects to be persisted during a session, this can be implemented differently in each agent.
 
-* **Memory** - Usually contained within a database that the agent can use like a RAG when the Agent tries to reference information saved.
+* **Memory** - Usually contained within a database that the agent can use like a RAG when the Agent tries to reference information saved. Data that reaches this component is persistent and might last forever.
 
 In the end we should get something with the following scheme:
 
@@ -212,4 +212,3 @@ When an operator wants to take over an AI agent, he should be striving to embed 
 We recommend reading the following guide for more information:
 
 [https://www.promptingguide.ai/guides/context-engineering-guide](https://www.promptingguide.ai/guides/context-engineering-guide)
-
