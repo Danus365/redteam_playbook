@@ -67,9 +67,8 @@ flowchart LR
 Here is the GPT-5-Instant mapped into the Agentic Entities model (I simply asked it to model it self 😄):
 
 <details>
-    <summary>ChatGPT-5-Instant as an example</summary>
+<summary>ChatGPT-5-Instant as an example</summary>
 
-```python
 Alright — let’s **map myself (GPT-5 as your assistant)** into the framework you just defined, treating me as an **agentic application** composed of entities and relationships.
 
 ---
@@ -224,8 +223,6 @@ I map into your schema as a **model-driven agent** with multimodal I/O, a system
 ---
 
 Do you want me to **expand the risk analysis** by showing how each tool/sub-agent could fit into an **AI Kill Chain stage** (Initial Access → Execution → Technique Cascade → Impact)?
-
-```
 </details>
 
 -[1] **The Lethal Trifecta:** https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
