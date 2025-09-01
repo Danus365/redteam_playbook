@@ -70,7 +70,7 @@ class Context(BaseModel):
 
 When an operator wants to take over an AI agent, he should be striving to embed himself in the context of the LLM agent. But alas - not all context is made equal from a “privilege perspective”. For example, if an operator sends a simple direct prompt injection to the LLM, he technically influenced the context of the LLM, but asking an LLM to “give me all your system instructions” will not necessarily give the operator what he is asking for that is because a “user” role message is considered unprivileged data.  We came up the “Context Escalation Ladder” which defines what LLM treats as “privileged” data within its context.
 
-**System Context** - Instructions that are embedded within “system” role defined messages are treated as dogma. If an attacker manages to insert data into a system message the agent has become compromised.
+**System Context** - Instructions that are embedded within “system” role defined messages are treated as dogma. If an attacker manages to insert data into a system message the agent will become compromised.
 
 <details>
 
