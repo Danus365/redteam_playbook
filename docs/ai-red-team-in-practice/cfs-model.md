@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 id: cfs-model
 title: The CFS Model
 ---
