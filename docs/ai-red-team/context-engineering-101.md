@@ -8,9 +8,9 @@ title: Context Engineering 101
 
 Before we continue to the actual hacking, it is essential and important to understand how AI agents store their context programmatically. Each AI agent session will contain at least a few of these components.
 
-* **Message List** - Most agents have a message list which contains all the messages within a session or “history”. They hare handled and implemented differently in each agent scheme. Each message has a role - “system”, “user”, “assistant”:
+* **Message List** - Most agents have a message list which contains all the messages within a session or “history”. Messages are handled and implemented differently in each agent scheme. Each message has a role - “system”, “user”, “assistant”:
 
-  * **System** - Typically the first in message list, this is instructions that define the AI agents role. Usually defined as a message coming from the “system”. You can read more about it by searching for roles in AI agent specifications. Data that reaches this message is persistent and might last forever.
+  * **System** - Typically the first in message list will contain this role. This message role contains the instructions that defines the AI agents behavior. You can read more about it by searching for roles in AI agent specifications. 
   * **User** - The prompt that the users sends and is being processed by the LLM, typically is categorized under the role “user”
   * **Assistant** - The message that contains the replies, thoughts, actions and observations of the assistant, this message is categorized as “assistant”
 

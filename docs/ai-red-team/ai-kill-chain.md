@@ -48,4 +48,4 @@ flowchart LR
 
 [1] https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
 
-Next lets examine talk about “Context Engineering”
+Next lets talk about “Context Engineering”
