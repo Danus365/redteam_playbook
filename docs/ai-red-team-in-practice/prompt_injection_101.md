@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 id: prompt-injection-101
 title: Prompt Injections 101
 ---

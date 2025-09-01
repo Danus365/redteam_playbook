@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 id: ai-kill-chain
 title: The AI Kill Chain
 ---
@@ -35,7 +35,8 @@ flowchart LR
     Exposure to untrusted content"] --> B["Execution
     Undefined behavior from injected input"]
     B --> C["Technique Cascade Chained tools/techniques (ATT&CK/ATLAS)"]
-    C --> D["Impact\nResource Hijacking, Data Exfiltration, etc."]
+    C --> D["Impact
+    Resource Hijacking, Data Exfiltration, etc."]
 
     subgraph "Example: IDE Agent Compromise"
         B --> C1["Read .env without approval"]
