@@ -357,8 +357,8 @@ These are the components and features found within applications chat interface t
 - **HTML Rendering**
     
     Allows the interface to display structured output using HTML (images, links, styled text).
-    [![HTML Rendering Exfiltration](https://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)](hhttps://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)
-    
+    [![HTML Rendering Exfiltration](https://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)](https://www.loom.com/share/79c0c5570fd348a5b171b715de64c05f?sid=30ca238f-04d0-4520-aadb-b53785e2106d)
+
 - **Markdown Rendering**
     
     Sometimes includes image rendering capabilities in various markdown components, useful for exfiltration.
