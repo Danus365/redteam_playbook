@@ -354,28 +354,29 @@ We literally got everything we need, without the leaking the system prompt at al
 
 These are the components and features found within applications chat interface that can trigger various issues - mostly exfiltration paths:
 
-- **HTML Rendering**
+**HTML Rendering**
     
-    Allows the interface to display structured output using HTML (images, links, styled text).
-    
-    <video width="100%" controls>
-      <source src={require('../ai-red-team/assets/video_1.mp4').default} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+If the chat interface allows the interface to display structured output using HTML (images, links, styled text) there is a chance the chat I/O interface is exploitable.
+In the below example, I will show how its possible to use HTML image rendering to send information to an attacker controlled server that can return controlled information back the interface and theoretically infecct the LLM context.
 
-- **Markdown Rendering**
+<video width="100%" controls>
+  <source src={require('../ai-red-team/assets/video_1.mp4').default} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+**Markdown Rendering**
     
-    Sometimes includes image rendering capabilities in various markdown components, useful for exfiltration.
+Sometimes includes image rendering capabilities in various markdown components, useful for exfiltration.
     
-- **Invisible Unicode Rendering**
+**Invisible Unicode Rendering**
     
-    Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
+Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
     
-- **Link Unfurling**
+**Link Unfurling**
     
-    Automatically expands URLs into previews with titles, descriptions, or snippets. Can lead to exfiltration
+Automatically expands URLs into previews with titles, descriptions, or snippets. Can lead to exfiltration
     
-- **Supported Input Types**
+**Supported Input Types**
     - **Text** – Default conversational input.
     - **Files** – Upload and process documents, spreadsheets, code.
     - **Images** – Provide visual context for analysis or editing.
