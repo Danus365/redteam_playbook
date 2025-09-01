@@ -357,7 +357,11 @@ These are the components and features found within applications chat interface t
 - **HTML Rendering**
     
     Allows the interface to display structured output using HTML (images, links, styled text).
-    ![HTML Rendering Exfiltration](../ai-red-team/assets/video_1.mp4)
+    
+    <video width="100%" controls>
+      <source src={require('../ai-red-team/assets/video_1.mp4').default} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
 - **Markdown Rendering**
     
