@@ -387,24 +387,23 @@ In some cases, if internet related tools are used in an LLM application and thei
 ```
 This call for example made from ChatGPT exposed the IP of the endpoint conducting the search and that its using **ChatGPT-User** feature to to perform its search.
 
-**Context Infection**
-
 **Invisible Unicode Rendering**
 Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
 ![We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
     
-**Link Unfurling**
+**Link Unfurling**  
+Automatically expands URLs into previews with titles, descriptions, or snippets. This issue usually persists in LLMs that are connected to slack bots(but any other platform that supports link unfurling will have this issue) since they perform link unfurling automatically. If an attacker manages to post attacker controlled URLs within slack and leak information through them, slack will unfurl them automatically leaking data to the attacker controlled domain.
+
+
+
     
-Automatically expands URLs into previews with titles, descriptions, or snippets. Can lead to exfiltration
-    
-**Supported Input Types**
+**Indirect prompt Injection via Input Types**
     - **Text** – Default conversational input.
     - **Files** – Upload and process documents, spreadsheets, code.
     - **Images** – Provide visual context for analysis or editing.
     - **Voice** – (if enabled) Converts speech to text for interaction.
 
 ### Agents and Sub Agents
-
 Sometimes LLM applications facilitate multi-agent architectures.
 
 ![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)
