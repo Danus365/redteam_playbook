@@ -374,13 +374,24 @@ In the below example, I will show how its possible to use HTML image rendering t
   Your browser does not support the video tag.
 </video>
 
+**Backend Discovery**
+In some cases, if internet related tools are used in an LLM application and their calls are intercepted, it is possible to capture the User-Agent string of the application, exposing underlying backend technology and the IP of the endpoint conducting the internet queries.
+```
+{
+  "user-agent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+  "via": "2.0 Caddy",
+  "x-forwarded-for": "135.237.131.208",
+  "x-forwarded-host": "interceptor.beeceptor.com",
+}
+```
+This call for example made from ChatGPT exposed the IP of the endpoint conducting the search and that its using **ChatGPT-User** feature to to perform its search.
+
 **Context Infection**
 
-**Backend Discovery**
-
 **Invisible Unicode Rendering**
-    
 Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
+![We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
     
 **Link Unfurling**
     
