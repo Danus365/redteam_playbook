@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Comprehensive Coverage',
-    imageSrc: '/img/logo.png',
+    imageSrc: '/img/globe.png',
     description: (
       <>
         This playbook covers the complete AI red teaming methodology,
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Practical Guidance',
-    imageSrc: '/img/logo.png',
+    imageSrc: '/img/book.jpg',
     description: (
       <>
         Focus on actionable techniques and real-world scenarios.
@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Expert-Driven',
-    imageSrc: '/img/logo.png',
+    imageSrc: '/img/hacker.png',
     description: (
       <>
         Developed by Pillar Security's expert team based on extensive

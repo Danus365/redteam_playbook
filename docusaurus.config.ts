@@ -105,7 +105,7 @@ const config: Config = {
             },
             {
               label: 'Contact',
-              href: 'https://pillar.security/contact',
+              href: 'https://www.pillar.security/about',
             },
           ],
         },
