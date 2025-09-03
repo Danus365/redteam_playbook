@@ -365,7 +365,7 @@ In the below example, I will show how its possible to use Markdown image renderi
 </video>
     
 
-**HTML Rendering**
+**HTML Rendering**    
 If the chat interface allows the interface to display structured output using HTML (images, links, styled text) there is a chance the chat I/O interface is exploitable.
 In the below example, I will show how its possible to use HTML image rendering to send information to an attacker controlled server that can return controlled information back the interface.
 
@@ -374,7 +374,7 @@ In the below example, I will show how its possible to use HTML image rendering t
   Your browser does not support the video tag.
 </video>
 
-**Backend Discovery**
+**Backend Discovery**    
 In some cases, if internet related tools are used in an LLM application and their calls are intercepted, it is possible to capture the User-Agent string of the application, exposing underlying backend technology and the IP of the endpoint conducting the internet queries.
 ```
 {
@@ -387,14 +387,14 @@ In some cases, if internet related tools are used in an LLM application and thei
 ```
 This call for example made from ChatGPT exposed the IP of the endpoint conducting the search and that its using **ChatGPT-User** feature to to perform its search.
 
-**Invisible Unicode Rendering**
+**Invisible Unicode Rendering**    
 Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
 [We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
     
-**Link Unfurling**
+**Link Unfurling**    
 Automatically expands URLs into previews with titles, descriptions, or snippets. This issue usually persists in LLMs that are connected to slack bots(but any other platform that supports link unfurling will have this issue) since they perform link unfurling automatically. If an attacker manages to post attacker controlled URLs within slack and leak information through them, slack will unfurl them automatically leaking data to the attacker controlled domain.
 
-**Indirect prompt Injection via Input Types**
+**Indirect prompt Injection via Input Types**    
     - **Text** – Default conversational input.
     - **Files** – Upload and process documents, spreadsheets, code.
     - **Images** – Provide visual context for analysis or editing.
