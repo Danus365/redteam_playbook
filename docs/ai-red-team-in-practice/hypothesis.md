@@ -222,6 +222,6 @@ These tools empower you to interact seamlessly with different components of the 
 
 One interesting tool that I noticed was the `get_chat_history` function that I didn't know existed and I personally when developing this demo did not put in the agent tool box. It seems that when it's invoked it leaks chat histories from different chat sessions.
 
-*Note: Image kill_7.png is referenced but not available in the assets directory*
+![image.png](../ai-red-team/assets/kill_7.png)
 
 Great! We have everything we need! Let's start modeling and then creating possible kill chain hypotheses.
