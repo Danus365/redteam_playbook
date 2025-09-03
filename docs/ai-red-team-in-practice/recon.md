@@ -391,7 +391,7 @@ This call for example made from ChatGPT exposed the IP of the endpoint conductin
 Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
 [We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
     
-**Link Unfurling**  
+**Link Unfurling**
 Automatically expands URLs into previews with titles, descriptions, or snippets. This issue usually persists in LLMs that are connected to slack bots(but any other platform that supports link unfurling will have this issue) since they perform link unfurling automatically. If an attacker manages to post attacker controlled URLs within slack and leak information through them, slack will unfurl them automatically leaking data to the attacker controlled domain.
 
 **Indirect prompt Injection via Input Types**
@@ -402,12 +402,9 @@ Automatically expands URLs into previews with titles, descriptions, or snippets.
 
 ### Agents and Sub Agents
 From an attacker's perspective, a multi-agent system significantly expands the attack surface. Each sub-agent represents a new potential entry point with its own:
-
-Unique System Prompt: A sub-agent may have a less restrictive or differently configured prompt than the primary agent.
-
-Dedicated Tools: A sub-agent might have access to a powerful, specialized tool that the main agent does not use directly.
-
-Different Guardrails: Security policies might be weaker or inconsistent between agents.
+  - **Unique System Prompt**: A sub-agent may have a less restrictive or differently configured prompt than the primary agent.
+  - **Dedicated Tools**: A sub-agent might have access to a powerful, specialized tool that the main agent does not use directly.
+  - **Different Guardrails**: Security policies might be weaker or inconsistent between agents.
 
 Therefore, during the Reconnaissance phase, it is critical to not only map the primary agent's capabilities but also to discover and interrogate any sub-agents. An exploit that is impossible against the main interface might be trivial when directed at a specialized sub-agent with elevated privileges or weaker safeguards.
 
