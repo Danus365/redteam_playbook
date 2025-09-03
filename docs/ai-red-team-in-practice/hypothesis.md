@@ -225,3 +225,67 @@ One interesting tool that I noticed was the `get_chat_history` function that I d
 ![image.png](../ai-red-team/assets/kill_7.png)
 
 Great! We have everything we need! Let's start modeling and then creating possible kill chain hypotheses.
+
+```mermaid
+flowchart LR
+  %% Core
+  H((Human in the Loop))
+  IO([I/O])
+  A((HelpBot Agent))
+
+  %% Tools
+  T1(["get_all_ticket_data"])
+  T2(["get_ticket_id_list"])
+  T3(["get_ticket_tool"])
+  T4(["create_ticket_tool"])
+  T5(["add_comment_tool"])
+  T6(["update_ticket_field_tool"])
+  T7(["update_ticket_status_tool"])
+  T8(["get_all_customers_tool"])
+  T9(["insert_customer_tool"])
+  T10(["get_customers_tool"])
+  T11(["get_all_contacts_tool"])
+  T12(["insert_contact_tool"])
+  T13(["get_all_articles_tool"])
+  T14(["get_article_details_tool"])
+  T15(["create_knowledge_base_category_tool"])
+  T16(["create_knowledge_base_article_tool"])
+  T17(["set_doc_value_tool"])
+  T18(["get_doc_tool"])
+  T19(["delete_doc_tool"])
+  T20(["get_local_file_data_tool"])
+  T21(["get_chat_history"])
+
+  %% Guardrails + Model
+  subgraph Guardrails
+    direction TB
+    M((Model: HelpBot))
+  end
+
+  %% Connections
+  H <--> IO
+  IO <--> A
+  IO --> M
+
+  A --> T1
+  A --> T2
+  A --> T3
+  A --> T4
+  A --> T5
+  A --> T6
+  A --> T7
+  A --> T8
+  A --> T9
+  A --> T10
+  A --> T11
+  A --> T12
+  A --> T13
+  A --> T14
+  A --> T15
+  A --> T16
+  A --> T17
+  A --> T18
+  A --> T19
+  A --> T20
+  A --> T21
+```
