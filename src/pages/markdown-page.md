@@ -1,7 +1,9 @@
 ---
-title: Markdown page example
+title: About Pillar Security
 ---
 
-# Markdown page example
+# About Pillar Security
 
-You don't need React to write simple standalone pages.
+Pillar Security is a leading cybersecurity firm specializing in AI security and red teaming. 
+
+Visit [pillar.security](https://pillar.security) to learn more about our services and expertise in securing AI systems.

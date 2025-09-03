@@ -13,21 +13,20 @@ const config: Config = {
   },
   themes: ['@docusaurus/theme-mermaid'],
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // Future flags for framework compatibility
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, // Improve compatibility with the upcoming framework v4
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://pillar.security',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // Deployment config for Pillar Security
+  organizationName: 'pillar-security',
+  projectName: 'redteam-playbook',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -46,10 +45,8 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Edit links disabled as we don't have a public GitHub repo
+          editUrl: undefined,
         },
         blog: false,
         theme: {
@@ -60,13 +57,13 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    // Pillar Security social card
+    image: 'img/logo.png',
     navbar: {
       title: 'AI Red Teaming Playbook',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Pillar Security Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -76,8 +73,8 @@ const config: Config = {
           label: 'Playbook',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          href: 'https://pillar.security',
+          label: 'Website',
           position: 'right',
         },
       ],
@@ -100,33 +97,29 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Pillar Security',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Website',
+              href: 'https://pillar.security',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Contact',
+              href: 'https://pillar.security/contact',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Resources',
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'AI Red Teaming',
+              to: '/docs/ai-red-team/introduction',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Pillar Security. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
