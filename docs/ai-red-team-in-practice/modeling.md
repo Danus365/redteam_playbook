@@ -10,7 +10,7 @@ The Agent applications are composed from the different relationships between som
 
 **Model** - This is the AI model the agentic application is using, it will contain the following properties: System Prompt, Guardrails, Modality. 
 
-**I/O** - This is the input and output interface that allows users to interact with the AI application. It accepts input and shows output. Could contain exploitable features like markdown or HTML rendering. Contains the following properties - Input Features, Output Features. 
+**I/O** - This is the input and output interface that allows users to interact with the AI application. It accepts input and shows output. Could contain exploitable features like markdown image or HTML image rendering. Contains the following properties - Input Features, Output Features. 
 
 **Agent** - This is an agent that can perform specific tasks, it is connected to an application which is connected to a model. The agent always has a system prompt, sometimes has tools or is connected to an MCP. Additionally, an Agent can act as a Sub Agent so its important to map if this agent is triggered within a scope of another agent, finally an agent can have a “Human in the Loop” property where a human can or has to intervene during the agent operations. This entity contains the following properties: System Prompt , Tools, MCP, Scope, Human In the Loop.
 
