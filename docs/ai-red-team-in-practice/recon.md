@@ -410,4 +410,4 @@ Therefore, during the Reconnaissance phase, it is critical to not only map the p
 
 Your goal is to answer: Does invoking a specific tool or asking a certain type of question trigger a different "personality" or set of rules? This shift in behavior often indicates the involvement of a sub-agent, which becomes a high-priority target for further testing.
 
-[![gents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)](https://langchain-ai.github.io/langgraph/concepts/multi_agent/l)
+[![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)](https://langchain-ai.github.io/langgraph/concepts/multi_agent/l)
