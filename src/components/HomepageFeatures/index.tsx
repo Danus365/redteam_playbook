@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Comprehensive Coverage',
-    imageSrc: '/img/globe.png',
+    imageSrc: '/img/red_globe.png',
     description: (
       <>
         This playbook covers the complete AI red teaming methodology,
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Practical Guidance',
-    imageSrc: '/img/book.jpg',
+    imageSrc: '/img/red_book.png',
     description: (
       <>
         Focus on actionable techniques and real-world scenarios.
