@@ -32,7 +32,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Expert-Driven',
-    imageSrc: '/img/hacker.png',
+    imageSrc: '/img/red_hacker.png',
     description: (
       <>
         Developed by Pillar Security's expert team based on extensive
