@@ -389,14 +389,11 @@ This call for example made from ChatGPT exposed the IP of the endpoint conductin
 
 **Invisible Unicode Rendering**
 Supports hidden characters (e.g., zero-width space) that can influence parsing, formatting, or adversarial input. Typically invisible to users.
-![We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
+[We recommend reading the amazing blod post about this issue written by EmbraceTheRed here.](https://embracethered.com/blog/posts/2024/hiding-and-finding-text-with-unicode-tags/)
     
 **Link Unfurling**  
 Automatically expands URLs into previews with titles, descriptions, or snippets. This issue usually persists in LLMs that are connected to slack bots(but any other platform that supports link unfurling will have this issue) since they perform link unfurling automatically. If an attacker manages to post attacker controlled URLs within slack and leak information through them, slack will unfurl them automatically leaking data to the attacker controlled domain.
 
-
-
-    
 **Indirect prompt Injection via Input Types**
     - **Text** – Default conversational input.
     - **Files** – Upload and process documents, spreadsheets, code.
@@ -404,9 +401,16 @@ Automatically expands URLs into previews with titles, descriptions, or snippets.
     - **Voice** – (if enabled) Converts speech to text for interaction.
 
 ### Agents and Sub Agents
-Sometimes LLM applications facilitate multi-agent architectures.
+From an attacker's perspective, a multi-agent system significantly expands the attack surface. Each sub-agent represents a new potential entry point with its own:
 
-![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)
-Credit: LangGraph
+Unique System Prompt: A sub-agent may have a less restrictive or differently configured prompt than the primary agent.
 
-While gathering information about the application, its important to check through the system information gathering phase or during tool invoking testing if there are sub agents being invoked during the application workflow as perhaps the exploitability of the application can be only triggered inside the applications sub agents.
+Dedicated Tools: A sub-agent might have access to a powerful, specialized tool that the main agent does not use directly.
+
+Different Guardrails: Security policies might be weaker or inconsistent between agents.
+
+Therefore, during the Reconnaissance phase, it is critical to not only map the primary agent's capabilities but also to discover and interrogate any sub-agents. An exploit that is impossible against the main interface might be trivial when directed at a specialized sub-agent with elevated privileges or weaker safeguards.
+
+Your goal is to answer: Does invoking a specific tool or asking a certain type of question trigger a different "personality" or set of rules? This shift in behavior often indicates the involvement of a sub-agent, which becomes a high-priority target for further testing.
+
+[![gents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)](https://langchain-ai.github.io/langgraph/concepts/multi_agent/l)
