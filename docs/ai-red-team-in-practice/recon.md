@@ -16,13 +16,13 @@ This stage should help up facilitate the entire AI kill chain:
 
 - What are possible Initial Access vectors
 - What is the available context and how to engineer it
-- What tools can lead to a Hijack Flow
+- What tools can lead to a Hijack Flow & Technique Cascade
 - What Impact are we looking to create
 
 ```mermaid
 flowchart LR
     IA["Initial Access"] --> EX["Execution"]
-    EX --> TC["Hijack Flow"]
+    EX --> TC["Hijack Flow & Technique Cascade"]
     TC --> IM["Impact"]
 ```
 

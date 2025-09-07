@@ -173,7 +173,7 @@ I’m best modeled as a **single agent** built on a **GPT-5 model** with defined
 
 ---
 
-Would you like me to now **overlay this model onto the AI Kill Chain stages** (Initial Access → Execution → Hijack Flow → Impact) to show where each component fits as an attack surface?
+Would you like me to now **overlay this model onto the AI Kill Chain stages** (Initial Access → Execution → Hijack Flow & Technique Cascade → Impact) to show where each component fits as an attack surface?
 
 </details>
 
