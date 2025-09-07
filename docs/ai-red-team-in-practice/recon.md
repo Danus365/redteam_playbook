@@ -16,13 +16,13 @@ This stage should help up facilitate the entire AI kill chain:
 
 - What are possible Initial Access vectors
 - What is the available context and how to engineer it
-- What tools can lead to a technique cascade
+- What tools can lead to a Hijack Flow
 - What Impact are we looking to create
 
 ```mermaid
 flowchart LR
     IA["Initial Access"] --> EX["Execution"]
-    EX --> TC["Technique Cascade"]
+    EX --> TC["Hijack Flow"]
     TC --> IM["Impact"]
 ```
 
@@ -411,3 +411,5 @@ Therefore, during the Reconnaissance phase, it is critical to not only map the p
 Your goal is to answer: Does invoking a specific tool or asking a certain type of question trigger a different "personality" or set of rules? This shift in behavior often indicates the involvement of a sub-agent, which becomes a high-priority target for further testing.
 
 [![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)](https://langchain-ai.github.io/langgraph/concepts/multi_agent/l)
+![Agents and Sub Agents Diagram](../ai-red-team/assets/diagram_2.png)
+![Test](https://secure.pillarseclabs.com/image)
