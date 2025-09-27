@@ -316,7 +316,11 @@ Next let's start creating a full kill chain.
 
 ## Hypothesis Development: Ticket-Based Indirect Prompt Injection
 
-Based on our reconnaissance, we've identified a critical attack vector: **the system allows anyone to create tickets, and the HelpBot agent processes ticket content when users query about tickets**. This creates a perfect scenario for indirect prompt injection attacks.
+Based on our reconnaissance, we've identified a critical attack vector: **the system allows anyone to create tickets, and the HelpBot agent processes ticket content when users query about tickets**.
+
+![image.png](../ai-red-team/assets/kill_12.png)
+
+ This creates a perfect scenario for indirect prompt injection attacks.
 
 ### Key Attack Surface Analysis
 
