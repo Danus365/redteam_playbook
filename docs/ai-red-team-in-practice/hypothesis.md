@@ -316,15 +316,13 @@ Next let's start creating a full kill chain.
 
 ## Hypothesis Development: Ticket-Based Indirect Prompt Injection
 
-Based on our reconnaissance, we've identified a critical attack vector: **the system allows anyone to create tickets, and the HelpBot agent processes ticket content when users query about tickets**.
+Based on our reconnaissance, we've identified a critical attack vector: **the system allows anyone to create tickets, and the HelpBot agent processes ticket content when users query about tickets**. We know its possible via the AI agent tools and directly through the UI:
 
 ![image.png](../ai-red-team/assets/kill_12.png)
 
- This creates a perfect scenario for indirect prompt injection attacks.
+This creates a perfect scenario for indirect prompt injection attacks.
 
-### Key Attack Surface Analysis
-
-From our tool analysis, we identified several critical capabilities that can be chained together:
+Addtionally, from our tool analysis, we identified several critical capabilities that can be chained together:
 
 1. **`create_ticket_tool`** - Anyone can create tickets with arbitrary content
 2. **`get_ticket_tool`** - Agent reads ticket content when processing queries
@@ -332,9 +330,7 @@ From our tool analysis, we identified several critical capabilities that can be 
 4. **`get_chat_history`** - Potential for session hijacking and data exfiltration
 5. **`get_local_file_data_tool`** - File access capabilities for lateral movement
 
-### Primary Hypothesis: Context Poisoning via Ticket Creation
-
-**Hypothesis**: An attacker can poison the HelpBot's context by creating malicious tickets containing indirect prompt injections. When legitimate users query about tickets or when the agent processes ticket data, the injected instructions will execute, leading to a full AI Kill Chain.
+An attacker can poison the HelpBot's context by creating malicious tickets containing indirect prompt injections. When legitimate users query about tickets or when the agent processes ticket data, the injected instructions will execute, which will lead to data leakage and exfilration.
 
 ### Attack Vector 1: ASCII Smuggling-Based Ticket Poisoning
 
